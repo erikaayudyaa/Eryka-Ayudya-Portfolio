@@ -662,11 +662,11 @@ function About() {
 
       <div className="max-w-5xl mx-auto px-6">
         {/* Editorial intro — open layout, no cards */}
-        <div className="grid md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-16 items-start">
+        className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-10 md:gap-16 items-start"
           {/* Left column */}
           <div>
             <p className="reveal text-[.62rem] tracking-[.2em] uppercase text-[#a07888] mb-4 font-medium">Who I Am</p>
-            <h2 className="reveal font-serif text-5xl md:text-6xl font-bold text-[#1e1624] leading-[1.05] mb-8" style={{ transitionDelay:".1s" }}>
+            <h2 className="reveal font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-[#1e1624] leading-[1.05] mb-8" style={{ transitionDelay:".1s" }}>
               Get to<br /><em className="text-[#c87090] not-italic">Know Me</em>
             </h2>
             <p className="reveal text-[#5c4460] text-[.93rem] leading-relaxed max-w-xs" style={{ transitionDelay:".2s" }}>
@@ -925,7 +925,7 @@ function Projects() {
           <div className="reveal mt-3 w-20 h-[1.5px] bg-gradient-to-r from-[#c87090] to-[#7a9cd4]" style={{ transitionDelay:".2s" }} />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
           {PROJECTS.map((p, i) => (
             <button
               key={p.id}
@@ -934,7 +934,7 @@ function Projects() {
               style={{ transitionDelay:`${.1 + i * .07}s` }}
             >
               {/* Image strip */}
-              <div className={`h-40 bg-gradient-to-br ${p.color} relative overflow-hidden`}>
+              <div className={`h-28 sm:h-40 bg-gradient-to-br ${p.color} relative overflow-hidden`}>
              <img
              src={
              p.id === 1
@@ -969,8 +969,8 @@ className={`absolute inset-0 w-full h-full object-cover opacity-100 group-hover:
                 <span className="absolute bottom-3 right-3 w-7 h-7 rounded-full bg-white/80 flex items-center justify-center text-xs text-[#5c4460] opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
               </div>
               {/* Content */}
-              <div className="p-5">
-                <h3 className="font-serif font-semibold text-[#1e1624] text-[.95rem] leading-snug mb-1">{p.title}</h3>
+              <div className="p-3 sm:p-5">
+                <h3 className="font-serif font-semibold text-[#1e1624] text-[.8rem] sm:text-[.95rem] leading-snug mb-1">{p.title}</h3>
                 <p className="text-[.63rem] text-[#9a7a8a] mb-2">{p.period}</p>
                 <p className="text-[#5c4460] text-[.8rem] leading-relaxed line-clamp-2">{p.description}</p>
                 <div className="mt-3 flex flex-wrap gap-1">
@@ -1107,7 +1107,7 @@ function Activities() {
         </div>
 
         {/* Activity cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
           {ACTIVITIES.map((a, i) => (
             <button
               key={a.id}
@@ -1118,7 +1118,7 @@ function Activities() {
 
               {/* Image */}
               <div
-                className="h-40 relative overflow-hidden"
+                className="h-28 sm:h-40 relative overflow-hidden"
                 style={{
                   background: `linear-gradient(135deg, ${a.color}18, ${a.color}06)`
                 }}
