@@ -1,0 +1,10 @@
+{
+  "description": "Create and manage responsive website designs effortlessly with an intuitive interface, tailored for designers and developers seeking efficiency.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
