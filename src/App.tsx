@@ -327,6 +327,57 @@ const PROJECTS = [
     color:"from-green-50 to-emerald-50", accent:"#30470e",
     imgId:"1597436985543-5cb34e74a9be",
   },
+  {
+  id:10,
+  title:"Pre-Internship Trainee",
+  subtitle:"KB-TK Islam Al Wafa & PKBM Al Wafa",
+  period:"Apr–May 2026",
+  category:"Internship · Network System Administration",
+  description:"Team project at KB-TK Islam Al Wafa and PKBM Al Wafa that transformed manual attendance into an automated card-based system with WhatsApp notifications for parents.",
+  overview:"A pre-internship team project focused on deploying an automated attendance system to improve the efficiency of attendance monitoring and parent notifications.",
+  purpose:"To support the implementation of a practical digital attendance system and ensure the application could be accessed reliably within the project environment.",
+  contribution:"Contributed as part of the NSA Team by handling system deployment and configuring Ngrok to provide external accessibility for the attendance application.",
+  impl:"Deployed the attendance system and configured Ngrok tunneling to make the application accessible externally for testing and operational use.",
+  tech:["Ngrok","Deployment","Network Configuration","Attendance System","WhatsApp Notification"],
+  outcome:"Successfully supported the deployment and external accessibility of the automated attendance system.",
+  color:"from-pink-50 to-rose-50",
+  accent:"#9A4F6F",
+  imgId:""
+},
+{
+  id:11,
+  title:"Fiber Optic Splicing & Testing",
+  subtitle:"Fiber Optic",
+  period:"2025",
+  category:"Fiber Optic · Technical Project",
+  description:"Practical fiber optic project involving fiber splicing and connection testing using optical testing equipment to verify signal quality.",
+  overview:"A hands-on fiber optic project focused on establishing and validating fiber connections through splicing and optical measurement.",
+  purpose:"To develop practical skills in fiber optic installation, splicing, and basic optical signal testing.",
+  contribution:"Performed fiber optic splicing and conducted optical measurements to verify the quality and performance of the completed fiber connection.",
+  impl:"Prepared and spliced fiber optic cables, then performed connection testing using optical testing equipment to evaluate signal quality.",
+  tech:["Fiber Optic","Splicing","Optical Testing","OLS","Fiber Optic Tools"],
+  outcome:"Successfully completed fiber optic splicing and verified the resulting connection through optical testing.",
+  color:"from-rose-50 to-orange-50",
+  accent:"#C87090",
+  imgId:""
+},
+{
+  id:12,
+  title:"FTTH Network Design",
+  subtitle:"FTTH",
+  period:"2025",
+  category:"FTTH · Network Design",
+  description:"FTTH network planning project using Google Earth to map fiber routes, plan distribution points, and visualize network coverage.",
+  overview:"A practical FTTH planning project focused on designing a basic fiber-to-the-home network layout using geographic mapping.",
+  purpose:"To develop practical skills in FTTH network planning, route mapping, and fiber distribution design.",
+  contribution:"Planned fiber routes and mapped the FTTH network layout using Google Earth based on the selected service area.",
+  impl:"Used Google Earth to map the coverage area, determine fiber routes, and visualize the planned FTTH distribution network.",
+  tech:["Google Earth","FTTH","Fiber Optic","Network Planning","Route Mapping"],
+  outcome:"Successfully produced a visual FTTH network plan with mapped fiber routes and distribution coverage.",
+  color:"from-purple-50 to-violet-50",
+  accent:"#9A7AD4",
+  imgId:""
+},
 ];
 
 const CERTIFICATES = [
@@ -424,40 +475,6 @@ const SKILLS = [
 ];
 
 const ACTIVITIES = [
-  {
-    id: 1,
-    title: "Pre-Internship Trainee",
-    org: "KB-TK Islam Al Wafa & PKBM Al Wafa",
-    date: "Apr-May 2026",
-    type: "Internship",
-    image: "/webPKL.jpg",
-    color: "#9A7AD4",
-    description:
-      "Team project at KB-TK Islam Al Wafa and PKBM Al Wafa that transformed manual attendance into an automated card-based system with WhatsApp notifications for parents.\n\nRoles:\n• AI Team: Backend & frontend development\n• NSA Team: Deployment & Ngrok accessibility\n• SMS Team: Social media & UI design support",
-  },
-  {
-  id: 11,
-  title: "Fiber Optic Splicing & Testing",
-  org: "Fiber Optic Practical Project",
-  date: "2025",
-  type: "Technical Project",
-  image: "/FIBEROPTIC.jpg",
-  color: "#C87090",
-  description:
-    "Performed fiber optic splicing and tested the completed connection using optical testing equipment to verify signal quality.",
-},
-{
-  id: 12,
-  title: "FTTH Network Design",
-  org: "FTTH Design Project",
-  date: "2025",
-  type: "Technical Project",
-  image: "/designFO.png",
-  color: "#9A7AD4",
-  description:
-    "Designed a basic FTTH network layout using Google Earth, including route planning and fiber distribution mapping.",
-},
-
   {
     id: 2,
     title: "AI Education Volunteer",
@@ -945,6 +962,12 @@ function ProjectModal({ project, onClose }: { project: typeof PROJECTS[0]; onClo
                   ? "/Linuxweb.png"
                   : project.id === 9
                   ? "/ciscoIT.png"
+                 :project.id === 10
+                 ? "/webPKL.jpg"
+                 : project.id === 11
+                  ? "/FIBEROPTIC.jpg"
+             : project.id === 12
+  ? "/designFO.png"
                   : `https://images.unsplash.com/photo-${project.imgId}?w=800&h=320&fit=crop&auto=format`
               }
               alt={project.title}
@@ -1065,13 +1088,19 @@ function Projects() {
                 ? "/LAMPSTACK.png"
                 : p.id === 6
                 ? "/Home-Network-infrastructure.png"
-                : p.id === 7
-                ? "/IntervlanRouting.png"
-                : p.id === 8
-                ? "/Linuxweb.png"
-                : p.id === 9
-                ? "/ciscoIT.png"
-               : `https://images.unsplash.com/photo-${p.imgId}?w=420&h=200&fit=crop&auto=format`
+              : p.id === 7
+  ? "/IntervlanRouting.png"
+  : p.id === 8
+  ? "/Linuxweb.png"
+  : p.id === 9
+  ? "/ciscoIT.png"
+  : p.id === 10
+  ? "/webPKL.jpg"
+  : p.id === 11
+  ? "/FIBEROPTIC.jpg"
+  : p.id === 12
+  ? "/designFO.png"
+  : `https://images.unsplash.com/photo-${p.imgId}?w=420&h=200&fit=crop&auto=format`
   }
   alt={p.title}
 className={`absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-100 transition-opacity duration-500 ${
