@@ -573,7 +573,7 @@ const ACTIVITIES = [
   image: "/dossfilm.jpg",
   color: "#91B7EE",
   description:
-    "Participated in the 2025 DOSS Film Competition as part of a creative team in producing a short film.",
+    "Participated in the 2025 DOSS Film Competition with Rencana Tuhan Studio as part of a creative team producing a short film.",
 },
 ];
 // ─── NAV ──────────────────────────────────────────────────────────────────────
