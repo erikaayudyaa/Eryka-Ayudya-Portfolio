@@ -499,7 +499,7 @@ const ACTIVITIES = [
   org: "Desain Komunikasi Visual",
   date: "2024–2025",
   type: "Extracurricular",
-  image: "/dkv.JPG",
+  image: "/dkv.jpg",
   color: "#9A7AD4",
   description:
     "Participated in DKV activities focused on visual design, creative content, and digital media.",
