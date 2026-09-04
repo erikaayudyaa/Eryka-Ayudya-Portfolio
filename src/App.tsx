@@ -435,6 +435,28 @@ const ACTIVITIES = [
     description:
       "Team project at KB-TK Islam Al Wafa and PKBM Al Wafa that transformed manual attendance into an automated card-based system with WhatsApp notifications for parents.\n\nRoles:\n• AI Team: Backend & frontend development\n• NSA Team: Deployment & Ngrok accessibility\n• SMS Team: Social media & UI design support",
   },
+  {
+  id: 11,
+  title: "Fiber Optic Splicing & Testing",
+  org: "Fiber Optic Practical Project",
+  date: "2025",
+  type: "Technical Project",
+  image: "/FIBEROPTIC.jpg",
+  color: "#C87090",
+  description:
+    "Performed fiber optic splicing and tested the completed connection using optical testing equipment to verify signal quality.",
+},
+{
+  id: 12,
+  title: "FTTH Network Design",
+  org: "FTTH Design Project",
+  date: "2025",
+  type: "Technical Project",
+  image: "/designFO.png",
+  color: "#9A7AD4",
+  description:
+    "Designed a basic FTTH network layout using Google Earth, including route planning and fiber distribution mapping.",
+},
 
   {
     id: 2,
@@ -459,6 +481,100 @@ const ACTIVITIES = [
     description:
       "Participated in Skomda Mengajar, an educational program introducing basic Artificial Intelligence concepts to students at SMP Negeri 1 Sidoarjo through hands-on learning with Google Teachable Machine.",
   },
+ {
+  id: 4,
+  title: "Independence Day Flag Ceremony Member",
+  org: "17 August Independence Day Ceremony",
+  date: "Aug 2025",
+  type: "Organization",
+  image: "/pengibar17agustus.JPG",
+  color: "#C87090",
+  description:
+    "Served as a flag ceremony member during the 2025 Independence Day celebration, demonstrating discipline, teamwork, and responsibility.",
+},
+
+{
+  id: 5,
+  title: "DKV Extracurricular Member",
+  org: "Desain Komunikasi Visual",
+  date: "2024–2025",
+  type: "Extracurricular",
+  image: "/dkv.JPG",
+  color: "#9A7AD4",
+  description:
+    "Participated in DKV activities focused on visual design, creative content, and digital media.",
+},
+
+{
+  id: 6,
+  title: "Basketball Team Member",
+  org: "Basketball Extracurricular",
+  date: "2025–2026",
+  type: "Extracurricular",
+  image: "/basket.jpg",
+  color: "#91B7EE",
+  description:
+    "Participated in basketball training and team activities, developing teamwork, discipline, and consistency.",
+},
+
+{
+  id: 7,
+  title: "SPMB Volunteer",
+  org: "Student Admission Committee",
+  date: "2024",
+  type: "Volunteer",
+  image: "/spmb.jpg",
+  color: "#C87090",
+  description:
+    "Assisted with student admission activities and supported the registration process as a volunteer.",
+},
+
+{
+  id: 8,
+  title: "Creative Media Staff",
+  org: "METIF · PDD Division",
+  date: "2024–2026",
+  type: "Organization",
+  image: "/metiv.jpg",
+  color: "#9A7AD4",
+  description:
+    "Contributed to the creative media team by supporting visual content, documentation, and promotional materials.",
+},
+
+{
+  id: 9,
+  title: "Event Photographer",
+  org: "School Event Documentation",
+  date: "2025",
+  type: "Documentation",
+  image: "/fotografer.jpg",
+  color: "#91B7EE",
+  description:
+    "Handled event photography and visual documentation for school activities.",
+},
+
+{
+  id: 10,
+  title: "Event Photographer",
+  org: "School Event Documentation",
+  date: "2026",
+  type: "Documentation",
+  image: "/fotografer2.jpg",
+  color: "#C87090",
+  description:
+    "Provided event photography and visual documentation for school activities and events.",
+},
+{
+  id: 13,
+  title: "DOSS Film Competition Participant",
+  org: "DOSS Film Competition",
+  date: "2025",
+  type: "Competition",
+  image: "/dossfilm.jpg",
+  color: "#91B7EE",
+  description:
+    "Participated in the 2025 DOSS Film Competition as part of a creative team in producing a short film.",
+},
 ];
 // ─── NAV ──────────────────────────────────────────────────────────────────────
 
@@ -662,11 +778,11 @@ function About() {
 
       <div className="max-w-5xl mx-auto px-6">
         {/* Editorial intro — open layout, no cards */}
-        className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-10 md:gap-16 items-start"
+        <div className="grid md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-16 items-start">
           {/* Left column */}
           <div>
             <p className="reveal text-[.62rem] tracking-[.2em] uppercase text-[#a07888] mb-4 font-medium">Who I Am</p>
-            <h2 className="reveal font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-[#1e1624] leading-[1.05] mb-8" style={{ transitionDelay:".1s" }}>
+            <h2 className="reveal font-serif text-5xl md:text-6xl font-bold text-[#1e1624] leading-[1.05] mb-8" style={{ transitionDelay:".1s" }}>
               Get to<br /><em className="text-[#c87090] not-italic">Know Me</em>
             </h2>
             <p className="reveal text-[#5c4460] text-[.93rem] leading-relaxed max-w-xs" style={{ transitionDelay:".2s" }}>
@@ -925,7 +1041,7 @@ function Projects() {
           <div className="reveal mt-3 w-20 h-[1.5px] bg-gradient-to-r from-[#c87090] to-[#7a9cd4]" style={{ transitionDelay:".2s" }} />
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {PROJECTS.map((p, i) => (
             <button
               key={p.id}
@@ -934,7 +1050,7 @@ function Projects() {
               style={{ transitionDelay:`${.1 + i * .07}s` }}
             >
               {/* Image strip */}
-              <div className={`h-28 sm:h-40 bg-gradient-to-br ${p.color} relative overflow-hidden`}>
+              <div className={`h-40 bg-gradient-to-br ${p.color} relative overflow-hidden`}>
              <img
              src={
              p.id === 1
@@ -969,8 +1085,8 @@ className={`absolute inset-0 w-full h-full object-cover opacity-100 group-hover:
                 <span className="absolute bottom-3 right-3 w-7 h-7 rounded-full bg-white/80 flex items-center justify-center text-xs text-[#5c4460] opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
               </div>
               {/* Content */}
-              <div className="p-3 sm:p-5">
-                <h3 className="font-serif font-semibold text-[#1e1624] text-[.8rem] sm:text-[.95rem] leading-snug mb-1">{p.title}</h3>
+              <div className="p-5">
+                <h3 className="font-serif font-semibold text-[#1e1624] text-[.95rem] leading-snug mb-1">{p.title}</h3>
                 <p className="text-[.63rem] text-[#9a7a8a] mb-2">{p.period}</p>
                 <p className="text-[#5c4460] text-[.8rem] leading-relaxed line-clamp-2">{p.description}</p>
                 <div className="mt-3 flex flex-wrap gap-1">
@@ -1107,7 +1223,7 @@ function Activities() {
         </div>
 
         {/* Activity cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {ACTIVITIES.map((a, i) => (
             <button
               key={a.id}
@@ -1118,7 +1234,7 @@ function Activities() {
 
               {/* Image */}
               <div
-                className="h-28 sm:h-40 relative overflow-hidden"
+                className="h-40 relative overflow-hidden"
                 style={{
                   background: `linear-gradient(135deg, ${a.color}18, ${a.color}06)`
                 }}
