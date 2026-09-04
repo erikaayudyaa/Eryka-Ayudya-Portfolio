@@ -487,7 +487,7 @@ const ACTIVITIES = [
   org: "17 August Independence Day Ceremony",
   date: "Aug 2025",
   type: "Organization",
-  image: "/pengibar17agustus.JPG",
+  image: "/pengibar.png",
   color: "#C87090",
   description:
     "Served as a flag ceremony member during the 2025 Independence Day celebration, demonstrating discipline, teamwork, and responsibility.",
@@ -499,7 +499,7 @@ const ACTIVITIES = [
   org: "Desain Komunikasi Visual",
   date: "2024–2025",
   type: "Extracurricular",
-  image: "/dkv.jpg",
+  image: "/dkv.png",
   color: "#9A7AD4",
   description:
     "Participated in DKV activities focused on visual design, creative content, and digital media.",
