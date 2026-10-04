@@ -378,6 +378,88 @@ const PROJECTS = [
   accent:"#9A7AD4",
   imgId:""
 },
+{
+  id:13,
+  title:"FTTH Installation & ONT Configuration",
+  subtitle:"FTTH",
+  period:"2026",
+  category:"FTTH · Installation",
+  description:"Hands-on FTTH installation from ODP to ONT, followed by ONT configuration and internet connectivity testing.",
+  overview:"A hands-on FTTH project involving fiber optic installation from ODP to ONT, followed by ONT configuration and connectivity testing.",
+  purpose:"To develop practical skills in FTTH installation, ONT configuration, and basic connectivity testing.",
+  contribution:"Installed the fiber optic connection from ODP to ONT, configured the ONT using a laptop through a LAN connection, and tested the internet connectivity.",
+  impl:"The fiber optic cable was connected from the ODP to the ONT. The ONT was connected to a laptop using a LAN cable for configuration. After configuration, the connection was tested to verify internet access.",
+  tech:["FTTH","Fiber Optic","ODP","ONT","LAN","Connectivity Testing"],
+  outcome:"Successfully established the FTTH connection and verified internet access through the connected laptop.",
+  color:"from-yellow-50 to-orange-50",
+  accent:"#D4A017",
+  imgId:""
+},
+{
+  id: 14,
+  title: "Reform.ID",
+  subtitle: "Web Development",
+  period: "2026",
+  category: "Website · Sustainability",
+  description:
+    "A web-based platform that gives used clothing a second chance through clothing condition detection, donation, recycling, and rework.",
+  overview:
+    "Reform.ID is a web-based platform focused on extending the life of clothing through detection, donation, recycling, and rework.",
+  purpose:
+    "To provide a digital platform that encourages clothing reuse and supports more sustainable fashion practices.",
+  contribution:
+    "Contributed to the development of the Reform.ID website as part of a team project.",
+  impl:
+    "The website presents several services including clothing detection, donation, store features, and Reform Ur Clothes.",
+  tech: ["Web Development", "HTML", "CSS", "JavaScript"],
+  outcome:
+    "Successfully developed and deployed the Reform.ID website as an accessible web platform.",
+  color: "from-green-50 to-emerald-50",
+  accent: "#176329",
+  imgId: ""
+},
+{
+  id: 15,
+  title: "Smart Distance Monitor",
+  subtitle: "IoT Project",
+  period: "2026",
+  category: "IoT · Distance Monitoring",
+
+  description:
+    "An IoT-based monitoring system that measures object distance in real time using an ultrasonic sensor and ESP32.",
+
+  overview:
+    "Smart Distance Monitor is an IoT project that detects object distance using the HC-SR04 ultrasonic sensor. The measured data is processed by ESP32 and displayed for monitoring.",
+
+  purpose:
+    "To measure the distance of an object automatically in real time without requiring manual checking.",
+
+  contribution:
+    "Contributed to the ESP32 deployment, sensor integration, programming, and testing of the distance monitoring system.",
+
+  impl:
+    "The system uses HC-SR04 to detect distance, while ESP32 processes the sensor data and displays the result on an OLED screen.",
+
+  tech: [
+    "ESP32",
+    "HC-SR04",
+    "OLED",
+    "Buzzer",
+    "Jumper Wires",
+    "USB Cable",
+    "MicroPython",
+    "Thonny",
+    "Apps Script",
+    "Google Sheets"
+  ],
+
+  outcome:
+    "Successfully developed and tested a distance monitoring prototype that displays the detected object distance in real time.",
+
+  color: "from-blue-50 to-cyan-50",
+  accent: "#176329",
+  imgId: ""
+},
 ];
 
 const CERTIFICATES = [
@@ -918,6 +1000,8 @@ function About() {
 // ─── PROJECT MODAL ────────────────────────────────────────────────────────────
 
 function ProjectModal({ project, onClose }: { project: typeof PROJECTS[0]; onClose: () => void }) {
+  const [mediaIndex, setMediaIndex] = useState(0);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     const esc = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -936,71 +1020,159 @@ function ProjectModal({ project, onClose }: { project: typeof PROJECTS[0]; onClo
         {/* Header */}
         <div className={`h-52 bg-gradient-to-br ${project.color} rounded-t-3xl relative overflow-hidden`}>
 
-          {project.id === 3 ? (
-            <video
-              controls
-             playsInline
-    src="/UKL.mp4"
-    className="absolute inset-0 w-full h-full object-contain bg-black z-10"
-            />
-          ) : (
-            <img
-              src={
-                project.id === 1
-                  ? "/smartcane.png"
-                  : project.id === 2
-                  ? "/glucose.png"
-                   :  project.id === 4
-                  ? "/mailserver.png"
-                  : project.id === 5
-                  ? "/LAMPSTACK.png"
-                  : project.id === 6
-                  ? "/Home-Network-infrastructure.png"
-                  : project.id === 7
-                  ? "/IntervlanRouting.png"
-                  : project.id === 8
-                  ? "/Linuxweb.png"
-                  : project.id === 9
-                  ? "/ciscoIT.png"
-                 :project.id === 10
-                 ? "/webPKL.jpg"
-                 : project.id === 11
-                  ? "/FIBEROPTIC.jpg"
-             : project.id === 12
-  ? "/designFO.png"
-                  : `https://images.unsplash.com/photo-${project.imgId}?w=800&h=320&fit=crop&auto=format`
-              }
-              alt={project.title}
-              className="absolute inset-0 w-full h-full object-contain opacity-80"
-            />
-          )}
+  {project.id === 3 ? (
+    <video
+      controls
+      playsInline
+      src="/UKL.mp4"
+      className="absolute inset-0 w-full h-full object-contain bg-black z-10"
+    />
+  ) : project.id === 14 ? (
+    <a
+      href="https://tim-reform.netlify.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="absolute inset-0 z-20 cursor-pointer group"
+    >
+      <img
+        src="/reform.png"
+        alt={project.title}
+        className="absolute inset-0 w-full h-full object-contain opacity-80"
+      />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent" />
+      <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
+        CLICK HERE TO VIEW THE WEBSITE →
+      </span>
+    </a>
+  ) : project.id === 15 ? (
+    <div className="absolute inset-0 bg-black">
 
-          <div className="absolute bottom-5 left-6 right-12">
-            <span className="inline-block text-[.6rem] tracking-[.15em] uppercase font-medium px-2.5 py-1 rounded-full bg-white/40 backdrop-blur-sm text-[#1e1624] mb-2">
-              {project.category}
-            </span>
+      {mediaIndex === 0 ? (
+        <img
+          src="/distance-appscript.png"
+          alt="Apps Script"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : mediaIndex === 1 ? (
+        <img
+          src="/distance-spreadsheet.png"
+          alt="Google Spreadsheet"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : mediaIndex === 2 ? (
+        <img
+          src="/distance-thonny.png"
+          alt="Thonny"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : (
+     <video
+  controls
+  playsInline
+  preload="metadata"
+  className="absolute inset-0 w-full h-full object-contain bg-black z-30"
+>
+  <source src="/distance-range.mp4" type="video/mp4" />
+</video>
+      )}
 
-            <h2 className="font-serif text-2xl font-bold text-[#1e1624] leading-tight">
-              {project.title}
-            </h2>
+    </div>
+  ) : (
+    <img
+      src={
+        project.id === 1
+          ? "/smartcane.png"
+          : project.id === 2
+          ? "/glucose.png"
+          : project.id === 4
+          ? "/mailserver.png"
+          : project.id === 5
+          ? "/LAMPSTACK.png"
+          : project.id === 6
+          ? "/Home-Network-infrastructure.png"
+          : project.id === 7
+          ? "/IntervlanRouting.png"
+          : project.id === 8
+          ? "/Linuxweb.png"
+          : project.id === 9
+          ? "/ciscoIT.png"
+          : project.id === 10
+          ? "/webPKL.jpg"
+          : project.id === 11
+          ? "/FIBEROPTIC.jpg"
+          : project.id === 12
+          ? "/designFO.png"
+          : project.id === 13
+          ? "/FO-ODP.ONT.png"
+          : project.id === 14
+          ? "/reform.png"
+          : `https://images.unsplash.com/photo-${project.imgId}?w=800&h=320&fit=crop&auto=format`
+      }
+      alt={project.title}
+      className="absolute inset-0 w-full h-full object-contain opacity-80"
+    />
+  )}
 
-            <p className="text-[.73rem] text-[#5c4460] mt-0.5">
-              {project.period}
-            </p>
-          </div>
+{/* Gradient */}
+<div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent" />
 
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/70 hover:bg-white flex items-center justify-center text-[#5c4460] text-lg transition-colors"
-          >
-            ×
-          </button>
+{/* Project Info */}
+<div className="absolute bottom-5 left-6 right-12 z-10">
+  <span className="inline-block text-[.6rem] tracking-[.15em] uppercase font-medium px-2.5 py-1 rounded-full bg-white/40 backdrop-blur-sm text-[#1e1624] mb-2">
+    {project.category}
+  </span>
 
+  <h2 className="font-serif text-2xl font-bold text-[#1e1624] leading-tight">
+    {project.title}
+  </h2>
+
+  <p className="text-[.73rem] text-[#5c4460] mt-0.5">
+    {project.period}
+  </p>
+</div>
+
+{/* Close Button */}
+<button
+  onClick={onClose}
+  className="absolute top-4 right-4 z-40 w-8 h-8 rounded-full bg-white/70 hover:bg-white flex items-center justify-center text-[#5c4460] text-lg transition-colors"
+>
+  ×
+</button>
+
+{/* Carousel Controls */}
+{project.id === 15 && (
+  <>
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        setMediaIndex((mediaIndex - 1 + 4) % 4);
+      }}
+      className="absolute left-3 top-1/2 -translate-y-1/2 z-40 w-9 h-9 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-[#5c4460] text-xl"
+    >
+      ‹
+    </button>
+
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        setMediaIndex((mediaIndex + 1) % 4);
+      }}
+      className="absolute right-3 top-1/2 -translate-y-1/2 z-40 w-9 h-9 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-[#5c4460] text-xl"
+    >
+      ›
+    </button>
+
+    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-40 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
+      {mediaIndex + 1} / 4
+    </div>
+  </>
+)}
+
+</div>
+
+{/* Body */}
+<div className="p-6 space-y-5">
         </div>
-
-        {/* Body */}
         {/* Body */}
         <div className="p-6 space-y-5">
           {[
@@ -1089,17 +1261,23 @@ function Projects() {
                 : p.id === 6
                 ? "/Home-Network-infrastructure.png"
               : p.id === 7
-  ? "/IntervlanRouting.png"
-  : p.id === 8
-  ? "/Linuxweb.png"
-  : p.id === 9
-  ? "/ciscoIT.png"
-  : p.id === 10
-  ? "/webPKL.jpg"
-  : p.id === 11
-  ? "/FIBEROPTIC.jpg"
-  : p.id === 12
-  ? "/designFO.png"
+              ? "/IntervlanRouting.png"
+              : p.id === 8
+              ? "/Linuxweb.png"
+              : p.id === 9
+              ? "/ciscoIT.png"
+              : p.id === 10
+              ? "/webPKL.jpg"
+              : p.id === 11
+              ? "/FIBEROPTIC.jpg"
+              : p.id === 12
+              ? "/designFO.png"
+              : p.id === 13
+              ? "/FO-ODP.ONT.png"
+              : p.id === 14
+              ? "/reform.png"
+               : p.id === 15
+                ? "/distance-range.jpg"
   : `https://images.unsplash.com/photo-${p.imgId}?w=420&h=200&fit=crop&auto=format`
   }
   alt={p.title}
