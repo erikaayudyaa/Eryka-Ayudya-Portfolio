@@ -554,6 +554,7 @@ const SKILLS = [
   { name:"GitHub", image:"/github.jpg", sub:"Git · Repository · Version Control" },
   { name:"Virtual Box", image:"/virtualbox.jpg", sub:"VM · Virtualization · Networking" },
   { name:"Xampp", image:"/Xampp.jpg", sub:"Apache · MySQL · PHP" },
+  { name:"Visual Studio Code", image:"/vscode.jpg", sub:"Code · Development · Extensions" },
 ];
 
 const ACTIVITIES = [
@@ -1375,7 +1376,7 @@ function Skills() {
 
         {/* Small tech pill row */}
         <div className="reveal mt-10 flex flex-wrap justify-center gap-2" style={{ transitionDelay:".35s" }}>
-          {["RouterOS","Cisco Packet Tracer","Postfix","Dovecot","Apache","Roundcube","VirtualBox","UTP Cabling","IPv4","VLAN","DHCP","HTTPS"].map(t => (
+          {["RouterOS","Cisco Packet Tracer","Postfix","Dovecot","Apache","Roundcube","VirtualBox","UTP Cabling","IPv4","VLAN","DHCP","HTTPS","HTML","CSS","JavaScript","TypeScript"].map(t => (
             <span key={t} className="px-3 py-1 rounded-full bg-white/70 text-[#4a5870] text-[.68rem] font-medium border border-[#ccd8ec]/50 hover:border-[#7a9cd4]/50 hover:text-[#5a78b4] transition-all duration-200">
               {t}
             </span>
