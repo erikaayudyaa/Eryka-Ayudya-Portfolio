@@ -465,6 +465,14 @@ const PROJECTS = [
 const CERTIFICATES = [
   {
     id: 1,
+    title: "MikroTik Certified Network Associate (MTCNA)",
+    org: "MikroTik",
+    date: "Oct 2026",
+    color: "#7AACD4",
+    image: "/MTCNA.png"
+  },
+  {
+    id: 1,
     title: "Smart Solution with IoT Competition 2025 Participant",
     org: "Universitas Mercu Buana",
     date: "Sep 2025",
