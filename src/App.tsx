@@ -480,6 +480,14 @@ const CERTIFICATES = [
     image: "/erikaIOT.png"
   },
   {
+  id: 2,
+  title: "Business Case Competition 2026 Preliminary Participant",
+  org: "Institut Teknologi Sepuluh Nopember (ITS)",
+  date: "Oct 2026",
+  color: "#7AACD4",
+  image: "/BCC-ITS.jpg"
+},
+  {
     id: 2,
     title: "NETCOMP 4.0 Networking Competition Participant",
     org: "Universitas Gadjah Mada",
